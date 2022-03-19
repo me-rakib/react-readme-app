@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+.ql-editor p,
+.ql-editor.ql-blank::before {
+  font-size: 1.3em;
+  font-weight: 100;
+}
+
+/* ===== No notes ===== */
+.no-notes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.no-notes>h2 {
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.no-notes>button {
+  border-radius: 3px;
+  border: none;
+  background-color: #4A4E74;
+  color: #fff;
+  padding: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+/* ===== Sidebar ===== */
+.sidebar-container {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  column-gap: 5px;
+}
+
+.sidebar-header>h3 {
+  font-size: 1.75rem;
+}
+
+.add-note-btn {
+  height: 30px;
+  width: 30px;
+  background-color: #4A4E74;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.note-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.text-snippet {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #4A4E74;
+  white-space: nowrap;
+}
+
+.selected {
+  background-color: #4A4E74;
+}
+
+.selected .text-snippet {
+  color: #fff;
+  font-weight: 700;
+}
+
+.sidebar-btns {
+  display: flex;
+  column-gap: 8px;
+}
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.rename-title {
+  background-color: #fff;
+  border: none;
+  color: #4A4E74;
+}
+
+.selected .rename-title {
+  background-color: #4A4E74;
+  border: none;
+  color: #fff;
+}
+
+/* ===== Editor ===== */
+
+.split {
+  display: flex;
+}
+
+.gutter {
+  background-color: #eee;
+}
+
+.gutter.gutter-horizontal {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal:hover {
+  cursor: col-resize;
+}
